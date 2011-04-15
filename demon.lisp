@@ -7,4 +7,5 @@
 ; load config
 (load (make-pathname :directory '(:relative ".") :name "demon" :type "conf"))
 
-(print username)
+(defvar connection (irc:connect :nickname username
+				:server servername))
